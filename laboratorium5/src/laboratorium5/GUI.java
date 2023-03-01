@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 public class GUI extends JFrame {
 	
 	private JPanel canvas, keyPad;
-	private int a;
+	private int b;
 	private JLabel display;
 	private JButton[] buttons = new JButton[16];
 

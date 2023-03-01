@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 
 
 public class GUI extends JFrame {
-
+	private char test;
 	private JPanel canvas, keyPad;
 	private JLabel display;
 	private JButton[] buttons = new JButton[16];

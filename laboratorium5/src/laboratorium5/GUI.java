@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -11,9 +12,9 @@ import javax.swing.border.Border;
 public class GUI extends JFrame {
 	
 	private JPanel canvas, keyPad;
-	private int b;
 	private JLabel display;
 	private JButton[] buttons = new JButton[16];
+	GridBagConstraints c = new GridBagConstraints();
 
 	
 	public GUI () {
@@ -22,30 +23,17 @@ public class GUI extends JFrame {
     	this.canvas = new JPanel();
     	this.canvas.setPreferredSize(new Dimension(420,550));
 		canvas.setLayout(new GridBagLayout());
+		this.setContentPane(canvas);
 		canvas.setBackground(Color.GRAY);
 
-		this.setContentPane(canvas);
-		GridBagConstraints c = new GridBagConstraints();
-		c.gridx = 0;
-		c.gridy = 0;
-		c.gridheight =50;
-		c.gridwidth= 410;
-		//c.gridheight = 200;
-		//c.gridwidth = 200;
-		this.display = new JLabel();
-		//display.setBounds(50,25, 300, 50);
-		c.gridx = 0;
-		c.gridy = 0;
-		c.gridheight =50;
-		c.gridwidth= 410;
+		
+		display = new JLabel("yy");
+		JTextField display = new JTextField();
+
+		display.setLayout(new GridLayout(4,4,10,10));;
+		display.setOpaque(true);
 		display.setBackground(Color.WHITE);
-		//Border b  = new Border(2);
-		//display.setBorder();
-		canvas.add(display, c);
-		//canvas.add(c, display);
-		this.keyPad = new JPanel();
-	//	canvas.add(c);
-		//this.display = new Display()
+		canvas.add(display);
 		
 		this.setVisible(true);
 		this.pack();

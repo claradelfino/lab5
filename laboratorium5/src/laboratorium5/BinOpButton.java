@@ -20,6 +20,7 @@ public class BinOpButton extends CalculatorButton {
 		return op.applyAsInt(x,  y);
 	}
 	
+
 	@Override
 	public void transition()  {
 		String displayText =  situation.display.getText();
@@ -30,7 +31,6 @@ public class BinOpButton extends CalculatorButton {
 				break;
 			case OpReady:
 				super.setColor(Color.LIGHT_GRAY);
-//				this.binOp =  binOp;
 				break;
 			case Input2:
 				break;

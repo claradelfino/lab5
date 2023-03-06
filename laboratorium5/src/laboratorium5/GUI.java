@@ -33,7 +33,6 @@ public class GUI extends JFrame {
 		
 		this.display = new JLabel();
 		this.display.setBorder(border);
-//		this.display.setText("test");
 		this.display.setFont(font);
 		this.display.setHorizontalAlignment(SwingConstants.RIGHT);
 		this.display.setBackground(Color.WHITE);
@@ -55,19 +54,19 @@ public class GUI extends JFrame {
 	    keyPad.add(new DigitButton("7", situation));
         keyPad.add(new DigitButton("8", situation));
         keyPad.add(new DigitButton("9", situation));
-        keyPad.add(new BinOpButton("/", situation));
+        keyPad.add(new BinOpButton("/", situation, (x, y) -> x/y));
         keyPad.add(new DigitButton("4", situation));
         keyPad.add(new DigitButton("5", situation));
         keyPad.add(new DigitButton("6", situation));
-        keyPad.add(new BinOpButton("*", situation));
+        keyPad.add(new BinOpButton("*", situation, (x, y) -> x*y));
         keyPad.add(new DigitButton("1", situation));
         keyPad.add(new DigitButton("2", situation));
         keyPad.add(new DigitButton("3", situation));
-        keyPad.add(new BinOpButton("-", situation));
+        keyPad.add(new BinOpButton("-", situation, (x, y) -> x-y));
         keyPad.add(new DigitButton("0", situation));
         keyPad.add(new EqualsButton("=", situation));
         keyPad.add(new CancelButton("C", situation));
-        keyPad.add(new BinOpButton("+", situation));
+        keyPad.add(new BinOpButton("+", situation, (x, y) -> x+y));
         
         GridBagConstraints gridKeyPad = new GridBagConstraints();
     	gridKeyPad.fill = GridBagConstraints.BOTH;

@@ -33,7 +33,8 @@ public abstract class CalculatorButton extends JButton implements ActionListener
 	
 	
 	public void transition()  {
-//		switch (Situation.state) {
+		
+		
 			
 //		}
 	}

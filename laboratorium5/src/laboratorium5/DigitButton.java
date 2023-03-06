@@ -14,9 +14,16 @@ public class DigitButton extends CalculatorButton {
 	public void transition()  {
 //		super.situation.display.setText(buttonText);
 		String displayText =  situation.display.getText();
+
 		switch (situation.state) {
 			case Input1:
-				super.situation.display.setText(displayText + buttonText);
+//				super.resetToZero();
+				if (displayText == "0") {
+					super.situation.display.setText(buttonText);
+				} else {
+					super.situation.display.setText(displayText + buttonText);
+				}
+				
 				break;
 			case OpReady:
 				super.situation.display.setText(buttonText);

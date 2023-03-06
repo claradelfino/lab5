@@ -34,6 +34,7 @@ public class GUI extends JFrame {
 		this.display = new JLabel();
 		this.display.setBorder(border);
 		this.display.setFont(font);
+		this.display.setText("0");
 		this.display.setHorizontalAlignment(SwingConstants.RIGHT);
 		this.display.setBackground(Color.WHITE);
 		this.display.setOpaque(true);

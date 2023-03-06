@@ -24,7 +24,6 @@ public class BinOpButton extends CalculatorButton {
 		switch (situation.state) {
 			case Input1:
 				situation.leftOperand = Integer.valueOf(displayText);
-				System.out.println(situation.leftOperand);
 				break;
 			case OpReady:
 				break;

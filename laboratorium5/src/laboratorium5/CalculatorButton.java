@@ -30,7 +30,10 @@ public abstract class CalculatorButton extends JButton implements ActionListener
 			}
 		});
 	}
-	
+	// jag vet inte om resetToZero funkar
+	public void resetToZero() {
+		this.situation.display.setText("0");
+	}
 	
 	public void transition()  {
 		

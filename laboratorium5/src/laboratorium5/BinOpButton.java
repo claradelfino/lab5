@@ -20,15 +20,17 @@ public class BinOpButton extends CalculatorButton {
 	
 	@Override
 	public void transition()  {
+		String displayText =  situation.display.getText();
 		switch (situation.state) {
 			case Input1:
-//				situation.leftOperand = situation.getDisplay();
+				situation.leftOperand = Integer.valueOf(displayText);
 				break;
 			case OpReady:
 				break;
 			case Input2:
 				break;
 			case HasResult:
+				situation.leftOperand = Integer.valueOf(displayText);
 				break;
 	}
 	}
@@ -36,6 +38,7 @@ public class BinOpButton extends CalculatorButton {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
 		
 	}
 

@@ -13,6 +13,17 @@ public class EqualsButton extends CalculatorButton {
 	
 	@Override
 	public void transition()  {
+		String displayText =  situation.display.getText();
+		switch (situation.state) {
+			case Input1:
+				break;
+			case OpReady:
+				break;
+			case Input2:
+				break;
+			case HasResult:
+				break;
+	}
 		
 	}
 

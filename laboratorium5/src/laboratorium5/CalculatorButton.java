@@ -25,7 +25,7 @@ public abstract class CalculatorButton extends JButton implements ActionListener
 		this.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				transition();
+				((CalculatorButton) e.getSource()).transition();
 				
 			}
 		});

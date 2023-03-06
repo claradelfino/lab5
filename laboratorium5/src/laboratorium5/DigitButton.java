@@ -8,12 +8,25 @@ public class DigitButton extends CalculatorButton {
 	public DigitButton(String buttonText, Situation situation) {
 		super(buttonText, situation);
 		this.setText(buttonText);
-//		super.situation.display.setText(buttonText);
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public void transition()  {
-		super.situation.display.setText(buttonText);
+//		super.situation.display.setText(buttonText);
+		String displayText =  situation.display.getText();
+		switch (situation.state) {
+			case Input1:
+				super.situation.display.setText(displayText + buttonText);
+				break;
+			case OpReady:
+				super.situation.display.setText(buttonText);
+				situation.state = State.Input2;
+				break;
+			case Input2:
+				break;
+			case HasResult:
+				break;
+	}
 	
 		
 		

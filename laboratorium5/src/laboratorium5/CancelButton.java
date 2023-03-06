@@ -17,19 +17,19 @@ public class CancelButton extends CalculatorButton {
 	public void transition() {
 		switch (this.sit.state) {
 		case HasResult:
-			this.sit.state = State.Input1;
-			this.sit.setDispay();
+			this.sit.state = State.Input1; 
+			super.resetToZero();
 			break;
 		case Input1:
-			this.sit.setDispay();
+			super.resetToZero();
 			break;
 		case Input2:
 			this.sit.state = State.Input1;
-			this.sit.setDispay();
+			super.resetToZero();
 			break;
 		case OpReady:
 			this.sit.state = State.Input1;
-			this.sit.setDispay();
+			super.resetToZero();
 
 			super.setColor(Color.LIGHT_GRAY);
 			break;

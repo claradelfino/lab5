@@ -1,5 +1,6 @@
 package laboratorium5;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.util.function.IntBinaryOperator;
 
@@ -10,7 +11,8 @@ public class BinOpButton extends CalculatorButton {
 	public BinOpButton(String buttonText, Situation situation, IntBinaryOperator binOp) {
 		super(buttonText, situation);
 		this.setText(buttonText);
-		this.binOp = binOp;
+		this.binOp =  binOp;
+//		this.binOp = binOp;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -24,8 +26,11 @@ public class BinOpButton extends CalculatorButton {
 		switch (situation.state) {
 			case Input1:
 				situation.leftOperand = Integer.valueOf(displayText);
+				super.setColor(Color.RED);
 				break;
 			case OpReady:
+				super.setColor(Color.LIGHT_GRAY);
+//				this.binOp =  binOp;
 				break;
 			case Input2:
 				break;

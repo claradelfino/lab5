@@ -1,5 +1,6 @@
 package laboratorium5;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
@@ -22,16 +23,24 @@ public class DigitButton extends CalculatorButton {
 					super.situation.display.setText(buttonText);
 				} else {
 					super.situation.display.setText(displayText + buttonText);
+
 				}
 				
 				break;
 			case OpReady:
-				super.situation.display.setText(buttonText);
+				
+				super.situation.display.setText("0");
 				situation.state = State.Input2;
 				break;
 			case Input2:
+				if (displayText == "0") {
+					super.situation.display.setText(buttonText);
+				} else {
+					super.situation.display.setText(displayText + buttonText);
+				}
 				break;
 			case HasResult:
+				super.situation.display.setText("0");
 				break;
 	}
 	

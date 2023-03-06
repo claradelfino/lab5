@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Situation {
 	State state = State.Input1;
 	JLabel display;
-	//BinOpButton binaryOperator;
+	BinOpButton binaryOperator;
 	int leftOperand;
 	
 	Situation(JLabel display) {
@@ -18,7 +18,7 @@ public class Situation {
 	}
 		
 	public void setDispay() {
-		this.display.setText(""+value); 
+		 
 	
 	}
 	

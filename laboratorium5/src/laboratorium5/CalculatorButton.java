@@ -30,10 +30,8 @@ public abstract class CalculatorButton extends JButton implements ActionListener
 			}
 		});
 	}
-<<<<<<< HEAD
-	public abstract void transition() ;s
-	public void setColor() {
-=======
+
+
 	// jag vet inte om resetToZero funkar
 	public void resetToZero() {
 		this.situation.display.setText("0");
@@ -41,7 +39,7 @@ public abstract class CalculatorButton extends JButton implements ActionListener
 	
 	public void transition()  {
 		
->>>>>>> branch 'master' of https://github.com/claradelfino/lab5.git
+
 		
 			
 //		}

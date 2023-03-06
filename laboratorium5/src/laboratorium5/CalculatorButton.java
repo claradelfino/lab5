@@ -11,9 +11,7 @@ public abstract class CalculatorButton extends JButton{
 		this.buttonText = buttonText;
 		this.sit = sit;
 	}
-	public void transition()  {
-		
-	}
+	public abstract void transition() ;s
 	public void setColor() {
 		
 	}

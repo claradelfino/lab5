@@ -11,5 +11,16 @@ public class Situation {
 	Situation(JLabel display) {
 		this.display = display;
 	}
+	
+	public int getDisplay() {
+		return Integer.parseInt(this.display.getText());
+	
+	}
+		
+	public void setDispay() {
+		this.display.setText(""+value); 
+	
+	}
+	
 }
 

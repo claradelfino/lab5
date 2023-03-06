@@ -15,20 +15,20 @@ public class CancelButton extends CalculatorButton {
 
 	@Override
 	public void transition() {
-		switch (this.sit.state) {
+		switch (sit.state) {
 		case HasResult:
-			this.sit.state = State.Input1; 
-			super.resetToZero();
+			sit.state = State.Input1; 
+			super.resetToZero(); 
 			break;
 		case Input1:
 			super.resetToZero();
 			break;
 		case Input2:
-			this.sit.state = State.Input1;
+			sit.state = State.Input1;
 			super.resetToZero();
 			break;
 		case OpReady:
-			this.sit.state = State.Input1;
+			sit.state = State.Input1; 
 			super.resetToZero();
 
 			super.setColor(Color.LIGHT_GRAY);

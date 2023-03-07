@@ -1,38 +1,51 @@
 package laboratorium5;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+
+/**
+ * @authors Clara Delfino, Nikolaos Gista
+ */
 
 @SuppressWarnings("serial")
 public class CancelButton extends CalculatorButton {
-	private Situation sit;
 
-	public CancelButton(String buttonText, Situation sit) {
-		super(buttonText, sit);
-		this.setText(buttonText); // TODO Auto-generated constructor stub}
+	public CancelButton(String buttonText, Situation situation) {
+//		 creates CancelButton
+		super(buttonText, situation);
+		this.setText(buttonText);
 	}
-	// TODO Auto-generated constructor stub
 
 	@Override
 	public void transition() {
-		switch (sit.state) {
-		case HasResult:
-			sit.state = State.Input1; 
-			super.resetToZero(); 
-			break;
+		switch (situation.state) {
+//		 perform actions based in which state the calculator is when the button is
+//		 pressed
 		case Input1:
-			super.resetToZero();
+//			 reset to zero
+			this.resetToZero();
 			break;
-		case Input2:
-			sit.state = State.Input1;
-			super.resetToZero();
-			break;
-		case OpReady:
-			sit.state = State.Input1; 
-			super.resetToZero();
 
-			super.setColor(Color.LIGHT_GRAY);
+		case OpReady:
+//			 reset to zero, changes the button's colour and set the state to Input1
+			this.resetToZero();
+			this.situation.binaryOperator.setColor(Color.LIGHT_GRAY);
+			this.situation.state = State.Input1;
 			break;
+
+		case Input2:
+//			 reset to zero, changes the button's colour and set the state to Input1
+			this.resetToZero();
+			this.situation.binaryOperator.setColor(Color.LIGHT_GRAY);
+			this.situation.state = State.Input1;
+			break;
+
+		case HasResult:
+//			 reset to zero, changes the state to Input1
+			this.resetToZero();
+			this.situation.state = State.Input1;
+			break;
+
 		default:
 			break;
 
@@ -41,8 +54,6 @@ public class CancelButton extends CalculatorButton {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
